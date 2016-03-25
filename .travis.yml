@@ -1,0 +1,13 @@
+nguage: python
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+install: 
+    - pip install -r requeirements/development.txt
+
+script:
+    - pep8
+
+tifications:
+    slack: healyou92:8oDYr17GYh4DHBykXngZRc5Q
