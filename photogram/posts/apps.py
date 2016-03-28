@@ -1,9 +1,8 @@
 from django.apps import AppConfig
 
 
-class PostAppConfig(AppConfig):
-
+class PostsAppConfig(AppConfig):
     name = "posts"
 
     def ready(self):
-        from .signals import post_save_post
+        from posts.signals.post_save import post_save_post
