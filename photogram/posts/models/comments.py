@@ -12,7 +12,7 @@ class Comment(models.Model):
         "Post",
     )
 
-    content = models.Textfield()
+    content = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True,)
     updated_at = models.DateTimeField(auto_now=True,)
