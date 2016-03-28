@@ -18,6 +18,10 @@ class Post(models.Model):
 
     content = models.TextField()
 
+    tag_set = models.ManyToManyField(
+        Tag,
+    )
+
     created_at = models.DateTimeField(auto_now_add=True,)
 
     updated_at = models.DateTimeField(auto_now=True,)
