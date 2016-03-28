@@ -1,21 +1,17 @@
 from django.db import models
-from users.user import User
+from django.conf import settings
 
 
 class Post(models.Model):
 
     user = models.Foreignkey(
-        User,
+        settings.AUTH_USER_MODEL,
     )
 
     image = models.ImageField()
 
     content = models.TextField()
 
-    created_at = models.DateTimeField(
-        auto_now_add = True
-    )
+    created_at = models.DateTimeField(auto_now_add=True,)
 
-    updated_at = models.DateTimeField(
-        auto_now = True
-    )
+    updated_at = models.DateTimeField(auto_now=True,)
