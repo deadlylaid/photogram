@@ -23,4 +23,6 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True,)
 
     def get_hash_id(self):
-        from hashids import Hashids
+        from photogram.utils.hash_id import get_hash_id
+        self.hash_id = get_hash_id(self)
+        self.save()
