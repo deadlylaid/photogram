@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'photogram',
     'users',
     'posts',
+    'tags',
 
     'django_extensions',
 ]
