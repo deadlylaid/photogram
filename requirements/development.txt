@@ -1,2 +1,2 @@
+-r production.txt
 pep8
-django == 1.9.4
