@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'photogram',
     'users',
     'posts',
+
+    'django_extensions',
 ]
 
 MIDDLEWARE_CLASSES = [
