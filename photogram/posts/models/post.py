@@ -22,6 +22,11 @@ class Post(models.Model):
         Tag,
     )
 
+    like_user_set = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name='like_post_set',
+        through="Like",
+    )
     created_at = models.DateTimeField(auto_now_add=True,)
 
     updated_at = models.DateTimeField(auto_now=True,)
