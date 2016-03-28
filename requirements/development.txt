@@ -1,2 +1,5 @@
 pep8
 django == 1.9.4
+django_extensions
+ipython
+

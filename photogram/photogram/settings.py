@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'photogram',
     'users',
     'posts',
+
+    'django_extensions',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -110,3 +112,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'users.User'
