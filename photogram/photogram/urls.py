@@ -6,7 +6,7 @@ from django.conf import settings
 from photogram.views import *
 from users.views import *
 from posts.views import *
-
+from tags.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^posts/(?P<slug>\w+)/comments/$', PostCommentCreateView.as_view(), name="comments"),
 
     url(r'^(?P<slug>\w+)/$', ProfileView.as_view(), name='profile'),
+    url(r'^explore/tags/(?P<slug>\w+)/$', TagDetailView.as_view(), name='tag'),
 
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

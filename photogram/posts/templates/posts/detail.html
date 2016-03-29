@@ -23,4 +23,21 @@
         <input type="submit">    
     </form>
 </section>
+
+<section>
+
+  <h2>Tags({{ post.tag_set.count }})개</h2>
+
+  <ul>
+    {% for tag in post.tag_set.all %}
+    <li>
+        <a href="{% url "tag" tag.name %}">
+        {{ tag.full_name }}
+        </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+</section>
 {% endblock %}
