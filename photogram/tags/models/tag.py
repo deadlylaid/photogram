@@ -8,6 +8,12 @@ class Tag(models.Model):
         unique=True,
     )
 
+    @property
+    def full_name(self):
+        return "#{tag_name}".format(
+            tag_name=self.name,
+        )
+
     created_at = models.DateTimeField(
         auto_now_add=True,
     )
@@ -17,6 +23,4 @@ class Tag(models.Model):
     )
 
     def __str__(self):
-        return "#{tag_name}".format(
-            tag_name=self.name,
-        )
+        return self.full_name
