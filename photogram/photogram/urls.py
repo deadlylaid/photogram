@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^posts/(?P<pk>\d+)/comments/$', PostCommentCreateView.as_view(), name="comment"),
 
     url(r'^(?P<slug>\w+)/$', ProfileView.as_view(), name='profile'),
+
     ]
