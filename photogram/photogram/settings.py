@@ -26,9 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'photogram',
+
     'users',
     'posts',
-    
     'tags',
     'django_extensions',
 ]

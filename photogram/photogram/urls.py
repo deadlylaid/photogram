@@ -14,7 +14,6 @@ urlpatterns = [
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     url(r'^signup/$', SignupView.as_view(), name='signup'),
     url(r'^(?P<slug>\w+)/$', ProfileView.as_view(), name='profile'),
-    
     url(r'^posts/$', PostListView.as_view(), name="list"),
     url(r'^posts/new/$', PostCreateView.as_view(), name="new-post"),
     url(r'^posts/(?P<pk>\d+)/$', PostDetailView.as_view(), name="post"),
