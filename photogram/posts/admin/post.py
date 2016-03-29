@@ -5,8 +5,8 @@ from posts.models import Post
 
 @admin.register(Post)
 class PostModelAdmin(admin.ModelAdmin):
-    
-    list_display =admin.ModelAdmin.list_display + (
+
+    list_display = admin.ModelAdmin.list_display + (
         'user',
 
         'content',
