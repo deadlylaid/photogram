@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^posts/$', PostListView.as_view(), name="list"),
     url(r'^posts/new/$', PostCreateView.as_view(), name="new-post"),
     url(r'^posts/(?P<slug>\w+)/$', PostDetailView.as_view(), name="post"),
-    url(r'^posts/(?P<pk>\d+)/comments/$', PostCommentCreateView.as_view(), name="comment"),
+    url(r'^posts/(?P<slug>\w+)/comments/$', PostCommentCreateView.as_view(), name="comments"),
 
     url(r'^(?P<slug>\w+)/$', ProfileView.as_view(), name='profile'),
 
