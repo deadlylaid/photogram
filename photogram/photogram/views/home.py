@@ -1,4 +1,4 @@
-from django.generic.view import TemplateView
+from django.views.generic import TemplateView
 
 
 class HomeView(TemplateView):
