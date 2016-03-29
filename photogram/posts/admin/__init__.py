@@ -1,1 +1,1 @@
-from .post import *
+from .post import PostModelAdmin

@@ -4,3 +4,6 @@ migrate:
 
 shell:
 	python photogram/manage.py shell_plus
+
+clean:
+	find ./ -type f -name "\.*swp" -delete	
