@@ -15,6 +15,6 @@ class PostTagCreateView(View):
         tag, is_tag_created = Tag.objects.get_or_create(
                 name=request.POST.get('name'),
         )
-        
+
         post.tag_set.add(tag)
         return redirect(post)

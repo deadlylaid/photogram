@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
 
-{% block content %}
-<h1>New Post</h1>
-<p>Create new post.</p>
+{% block title %}신규 포스트 작성{% endblock %}
 
-<form action="" method="post">
+{% block content %}
+<h1>PostCreateView</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
   {% csrf_token %}
-  <textarea name="content"></textarea>
-  <input type="submit" />
+  <input type="text" name="content" placeholder="content" required>
+  <input type="file" name="image" required>
+  <input type="submit" value="포스트 등록">
 </form>
 {% endblock %}
