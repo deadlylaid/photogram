@@ -32,7 +32,11 @@ class Post(models.Model):
 
     @property
     def tagified_content(self):
-        return self.content.replace("#핵폭탄", "<a href='/eae/'>#핵폭탄</a>")
+        tag_list = [
+                word.replace("#","")
+                for word in self.content.split(" ")
+                if word.startswith("#")
+        ]
 
     created_at = models.DateTimeField(auto_now_add=True,)
 
