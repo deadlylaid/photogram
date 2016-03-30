@@ -19,9 +19,7 @@ def post_save_post_tags(sender, instance, created, **kwargs):
     tag_list = [
         word.replace("#", "")
         for word in instance.content.split(" ")
-        if word.startswith("#")
-       ]
- 
+        if word.startswith("#")]
     for tag_name in tag_list:
         tag, is_tag_created = Tag.objects.get_or_create(
             name=tag_name,
