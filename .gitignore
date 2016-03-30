@@ -60,3 +60,10 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#autoenv .env
+.env
+
+#swp
+*.py[cod]
+*.swp
