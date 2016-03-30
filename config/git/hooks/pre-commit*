@@ -4,4 +4,3 @@ echo "-------------------------------------------"
 echo "Start checking python style guide with PEP8"
 echo "-------------------------------------------"
 pep8 .
-find ./ -type f -name "\.*swp" -delete
