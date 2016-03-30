@@ -37,7 +37,13 @@
     </li>
     {% endfor %}
   </ul>
-
+   
+   
+   <form action="{% url "tags" post.hash_id %}" method="post">
+       {% csrf_token %}
+    <input type="text" name='name' placeholer='name' required>
+    <input type="submit">   
+   </form>
 
 </section>
 {% endblock %}

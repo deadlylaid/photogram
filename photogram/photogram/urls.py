@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^posts/new/$', PostCreateView.as_view(), name="new-post"),
     url(r'^posts/(?P<slug>\w+)/$', PostDetailView.as_view(), name="post"),
     url(r'^posts/(?P<slug>\w+)/comments/$', PostCommentCreateView.as_view(), name="comments"),
+    url(r'^posts/(?P<slug>\w+)/tags/$', PostTagCreateView.as_view(), name="tags"),
 
     url(r'^(?P<slug>\w+)/$', ProfileView.as_view(), name='profile'),
     url(r'^explore/tags/(?P<slug>\w+)/$', TagDetailView.as_view(), name='tag'),
