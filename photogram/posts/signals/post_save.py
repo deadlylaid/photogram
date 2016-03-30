@@ -17,8 +17,8 @@ def post_save_post(sender, instance, created, **kwargs):
     '''
     tag_list = [
         word.replace("#", "")
-        for word in instance.content.spilt(" ")
-        if word.startwith("#")
+        for word in instance.content.split(" ")
+        if word.startswith("#")
        ]
 
     for tag_name in tag_list:
