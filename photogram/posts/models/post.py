@@ -29,6 +29,11 @@ class Post(models.Model):
         related_name='like_post_set',
         through="Like",
     )
+
+    @property
+    def tagified_content(self):
+        return self.content.replace("#핵폭탄", "<a href='/eae/'>#핵폭탄</a>")
+
     created_at = models.DateTimeField(auto_now_add=True,)
 
     updated_at = models.DateTimeField(auto_now=True,)

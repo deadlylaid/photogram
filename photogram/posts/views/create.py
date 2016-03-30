@@ -11,8 +11,6 @@ class PostCreateView(LoginRequiredMixin, PostBaseView, CreateView):
         'image',
     ]
 
-    template_name = "posts/new.html"
-
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(PostCreateView, self).form_valid(form)
