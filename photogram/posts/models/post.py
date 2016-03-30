@@ -33,7 +33,7 @@ class Post(models.Model):
     @property
     def tagified_content(self):
         tag_list = [
-                word.replace("#","")
+                word.replace("#", "")
                 for word in self.content.split(" ")
                 if word.startswith("#")
         ]
