@@ -5,6 +5,9 @@ from .base import PostBaseView
 
 
 class PostCreateView(LoginRequiredMixin, PostBaseView, CreateView):
+
+    login_url = '/login/'
+
     template_name = "posts/new.html"
     fields = [
         'content',
