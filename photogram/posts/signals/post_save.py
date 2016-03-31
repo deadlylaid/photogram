@@ -16,12 +16,6 @@ def post_save_post_tags(sender, instance, created, **kwargs):
     '''
     post.content로 넘어온 데이터를 splite으로 자른다
     '''
-    tag_list = [
-        word.replace("#", "")
-        for word in instance.content.split(" ")
-        if word.startswith("#")]
-    for tag_name in tag_list:
-        tag, is_tag_created = Tag.objects.get_or_create(
-            name=tag_name,
-        )
-        instance.tag_set.add(tag)
+    from tags.utils.tagify import get_tag_list
+
+    tag_list = get_tag_list(instance.content)

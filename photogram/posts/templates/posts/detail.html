@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load tagify %}
 
 {% block title %}photogram{% endblock %}
 
@@ -8,7 +8,7 @@
 <img src="{{post.image.url}}" width="400px" height="400px"/>
 <br/>
 
-  <p>{{ post.tagified_content | safe }}</p>
+<p>{{ post.content | tagify | safe}}</p>
 
 <section>
     <h2>댓글 ({{ post.comment_set.count }})개</h2>
