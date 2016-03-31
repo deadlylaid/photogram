@@ -5,11 +5,11 @@ from users.models import User
 
 
 class Follow(models.Model):
-    Follower = models.ForeignKey(
+    follower = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         related_name='+',
     )
-    Followee = models.ForeignKey(
+    followee = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         related_name='+',
     )

@@ -8,6 +8,7 @@ from tags.models import Tag
 @receiver(post_save, sender=Post)
 def post_save_post(sender, instance, created, **kwargs):
     if created:
+        from IPython import embed; embed()
         instance.get_hash_id()
 
 
