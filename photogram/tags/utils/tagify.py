@@ -14,6 +14,7 @@ def get_tag_list(content):
 
     return tag_list
 
+
 def get_tagify_content(content):
     tag_list = get_tag_list(content)
     word_list = [
@@ -22,9 +23,8 @@ def get_tagify_content(content):
         in content.split(" ")
     ]
 
-
     tagify_list = []
-    
+
     for word in word_list:
         if word in ["#{tag_name}".format(tag_name=tag) for tag in tag_list]:
             word = "<a href='{tag_url}'>{tag_name}</a> ".format(
