@@ -1,4 +1,5 @@
 import os
+import raven
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +29,7 @@ INSTALLED_APPS = [
     'posts',
     'tags',
 ]
-import raven
+
 
 RAVEN_CONFIG = {
     'dsn': 'https://eb5da71db4654faeab564001faa0edde:1cde857c28eb40bd880d7014714b5f38@app.getsentry.com/72473',
@@ -76,7 +77,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 STATIC_URL = '/static/'
