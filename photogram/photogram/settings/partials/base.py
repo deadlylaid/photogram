@@ -36,6 +36,7 @@ RAVEN_CONFIG = {
     # If you are using git, you can also automatically configure the
     # release based on the git info.
 }
+
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,6 +49,15 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'photogram.urls'
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
 
 TEMPLATES = [
     {
@@ -83,4 +93,6 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'users.User'
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT_DIR, 'dist', 'static')
 MEDIA_ROOT = os.path.join(PROJECT_ROOT_DIR, 'dist', 'media')

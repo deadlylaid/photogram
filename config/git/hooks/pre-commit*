@@ -2,5 +2,7 @@
 
 echo "-------------------------------------------"
 echo "Start checking python style guide with PEP8"
+echo "            Delete '.swp' file             "
 echo "-------------------------------------------"
+find ./ -type f -name "\.*swp" -delete
 pep8 .
