@@ -1,12 +1,15 @@
 from django.conf.urls import url
-from django.conf.urls.static import static
+
 from django.contrib import admin
-from django.conf import settings
 
 from photogram.views import *
 from users.views import *
 from posts.views import *
 from tags.views import *
+
+from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
