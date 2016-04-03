@@ -8,10 +8,10 @@ from .base import BASE_DIR
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-#collectsatic이 이루어지고 나서 저장될 경로
+# collectsatic이 이루어지고 나서 저장될 경로
 STATIC_ROOT = os.path.join(PROJECT_ROOT_DIR, "dist", "static")
 
-#media(예를 들면 사진 같은거) 유저가 올리면 저장될 경로
+# media(예를 들면 사진 같은거) 유저가 올리면 저장될 경로
 MEDIA_ROOT = os.path.join(PROJECT_ROOT_DIR, "dist", "media")
 
 BASE_DIR2 = os.path.dirname(BASE_DIR)

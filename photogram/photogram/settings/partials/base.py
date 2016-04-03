@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
- 
+
     'raven.contrib.django.raven_compat',
     'pipeline',
 
@@ -34,7 +34,7 @@ INSTALLED_APPS = [
 
 
 RAVEN_CONFIG = {
-#    'dsn': 'https://eb5da71db4654faeab564001faa0edde:1cde857c28eb40bd880d7014714b5f38@app.getsentry.com/72473',
+    # 'dsn': 'https://eb5da71db4654faeab564001faa0edde:1cde857c28eb40bd880d7014714b5f38@app.getsentry.com/72473',
     # If you are using git, you can also automatically configure the
     # release based on the git info.
 }
