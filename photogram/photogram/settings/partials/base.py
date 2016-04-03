@@ -22,17 +22,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'photogram',
+ 
     'raven.contrib.django.raven_compat',
+    'pipeline',
 
     'users',
+    'photogram',
     'posts',
     'tags',
 ]
 
 
 RAVEN_CONFIG = {
-    'dsn': 'https://eb5da71db4654faeab564001faa0edde:1cde857c28eb40bd880d7014714b5f38@app.getsentry.com/72473',
+#    'dsn': 'https://eb5da71db4654faeab564001faa0edde:1cde857c28eb40bd880d7014714b5f38@app.getsentry.com/72473',
     # If you are using git, you can also automatically configure the
     # release based on the git info.
 }
@@ -49,15 +51,6 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'photogram.urls'
-
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'pipeline.finders.PipelineFinder',
-)
-
 
 TEMPLATES = [
     {

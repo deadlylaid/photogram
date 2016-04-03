@@ -4,3 +4,4 @@ hashids
 psycopg2
 raven
 dj-database-url
+django-pipeline
