@@ -1,3 +1,7 @@
 django == 1.9.4
 pillow
 hashids
+psycopg2
+raven
+dj-database-url
+django-pipeline

@@ -32,11 +32,9 @@ class Post(models.Model):
 
     @property
     def tagified_content(self):
-        tag_list = [
-                word.replace("#", "")
-                for word in self.content.split(" ")
-                if word.startswith("#")
-        ]
+        from tags.utils.tagify import get_tagify_content
+
+        return get_tagify_content(self.content)
 
     created_at = models.DateTimeField(auto_now_add=True,)
 
