@@ -8,3 +8,11 @@ Before contribute to [photogram](https://github.com/deadlylaid/photogram/), shou
 ```
 $ ln config/git/hooks/pre-commit .git/hooks
 ```
+
+##.pep8 
+
+when you ignore check pep8 about migrations file
+
+```
+exclude = */migrations/*
+```
